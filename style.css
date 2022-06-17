@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.bg1 {
+    background-image: url('../BitCoin-currency-Projekt/img/bg1.jpg');
+    height: 100vh;
+    opacity: 0.5;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    z-index: -10;
+}
+
+.firstSection {
+    height: 100vh;
+}
+
+.welcomeText {
+    display: flex;
+    justify-content: center;
+    margin: 70px;
+}
+
+.currentCourse {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigationButtons {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.currencyBtn {
+    padding: 10px;
+    border-radius: 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: rgba(99, 99, 99, 0.678);
+    color: rgb(2, 0, 104);
+    font-size: 1.5em;
+    border-color: white;
+}
+
+
+
+.chartBtn {
+    padding: 10px;
+    border-radius: 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: rgba(99, 99, 99, 0.678);
+    color: rgb(2, 0, 104);
+    font-size: 1.5em;
+    border-color: white;
+}
+
+.secondection {
+    height: 100vh;
+    position: relative;
+    margin: 0;
+}
+
+.bg2 {
+    background-image: url(../BitCoin-currency-Projekt/img/bg2.jpg);
+    min-height: 100vh;
+    opacity: 0.5;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    z-index: -10;
+}
