@@ -27,7 +27,7 @@ body {
 .welcomeText {
     display: flex;
     justify-content: center;
-    margin: 70px;
+    padding-top: 70px;
 }
 
 .currentCourse {
@@ -40,6 +40,11 @@ body {
     margin-top: 100px;
     display: flex;
     justify-content: center;
+}
+
+.navigationButtons a {
+    text-decoration: none;
+    color: black;
 }
 
 .currencyBtn {
@@ -66,21 +71,16 @@ body {
     border-color: white;
 }
 
-.secondection {
-    height: 100vh;
-    position: relative;
-    margin: 0;
-}
+.secondSection {}
 
 .bg2 {
     background-image: url(../BitCoin-currency-Projekt/img/bg2.jpg);
-    min-height: 100vh;
+    height: 100vh;
     opacity: 0.5;
     width: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-
-    z-index: -10;
+    position: absolute;
+    z-index: -9;
 }
