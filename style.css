@@ -1,27 +1,21 @@
+html {
+    scroll-behavior: smooth !important;
+}
+
 body {
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    scroll-behavior: smooth;
-}
-
-.bg1 {
-    background-image: url('../BitCoin-currency-Projekt/img/bg1.jpg');
-    height: 100vh;
-    opacity: 0.5;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    z-index: -10;
+    color: white
 }
 
 .firstSection {
     height: 100vh;
+    background-image: url('../BitCoin-currency-Projekt/img/bg1.jpg');
+}
+
+.bg3 {
+    min-height: 100vh;
+    background-image: url('../BitCoin-currency-Projekt/img/bg1.jpg');
 }
 
 .welcomeText {
@@ -44,7 +38,7 @@ body {
 
 .navigationButtons a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .currencyBtn {
@@ -53,12 +47,10 @@ body {
     margin-right: 10px;
     cursor: pointer;
     background-color: rgba(99, 99, 99, 0.678);
-    color: rgb(2, 0, 104);
+
     font-size: 1.5em;
     border-color: white;
 }
-
-
 
 .chartBtn {
     padding: 10px;
@@ -66,21 +58,169 @@ body {
     margin-left: 10px;
     cursor: pointer;
     background-color: rgba(99, 99, 99, 0.678);
-    color: rgb(2, 0, 104);
+
     font-size: 1.5em;
     border-color: white;
 }
 
-.secondSection {}
+.currencyChangeDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    font-size: 1.5em;
+    flex-direction: column;
+    min-height: 100vh;
+    background-image: url('../BitCoin-currency-Projekt/img/bg1.jpg');
+}
 
-.bg2 {
-    background-image: url(../BitCoin-currency-Projekt/img/bg2.jpg);
-    height: 100vh;
-    opacity: 0.5;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    z-index: -9;
+.currencyChangeDiv span {
+    width: 80%;
+}
+
+.currencyFields {
+    margin-top: 90px;
+    width: 450px;
+    height: 553px;
+    justify-content: center;
+    display: flex;
+}
+
+.currencyChange {
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+    align-items: center;
+}
+
+.currencyInput {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.currencyInput span {
+    margin: 20px;
+}
+
+.currencyInput input {
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.exchangeRate {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.showChart {
+    display: flex;
+    justify-content: center;
+}
+
+.showChart button {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    border-radius: 15px;
+
+    cursor: pointer;
+    background-color: rgba(99, 99, 99, 0.678);
+
+    font-size: 1.1em;
+    border-color: white;
+}
+
+.showChart a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+}
+
+.chartANDtable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.chartANDtable span {
+    margin-left: 40px;
+    margin-right: 15px;
+}
+
+.getDate {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.getDate button {
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+    background-color: rgba(99, 99, 99, 0.678);
+    font-size: 1.3em;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.chartDiv {
+    display: flex;
+    justify-content: center;
+    margin-left: 150px;
+    margin-right: 150px;
+    background-color: rgba(249, 250, 250, 0.596);
+}
+
+.d-none {
+    display: none;
+}
+
+.tableOutput {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tableOutputHolder {
+    margin-top: 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 300px;
+    margin-right: 300px;
+    overflow-y: scroll;
+    height: 200px;
+    border: 5px solid white;
+
+}
+
+@media (max-width: 900px) {
+    .welcomeText span {
+        font-size: 0.8em;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .navigationButtons {
+        display: flex;
+        flex-direction: column;
+        margin: 25px !important;
+    }
+
+    .currencyBtn {
+        margin: 10px !;
+    }
+
+    .chartBtn {
+        margin: 10px !
+    }
+
+
 }

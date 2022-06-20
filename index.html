@@ -10,13 +10,14 @@
     <script src="script.js"></script>
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 </head>
 
 <body onload="loadCurrentRate()">
     <div class="mainContainer">
         <section class="firstSection">
-            <div class="bg1"></div>
+
             <div class="welcomeText">
                 <span>
                     <h1>Welcome to the Bitcoin currency checker</h1>
@@ -28,20 +29,61 @@
                     <div class="navigationButtons">
                         <button class="currencyBtn" id="currencyBtn"><a href="#currencyChange"> currency
                                 change</a></button>
-                        <button class="chartBtn" id="chartBtn"><a href="#chart"> Historic chart</a></button>
+                        <button class="chartBtn" id="chartBtn"><a href="#chartANDtable"> Historic chart</a></button>
                     </div>
                 </span>
             </div>
         </section>
         <section class="secondSection"></section>
-        <div class="bg2"></div>
-        <div class="currencyChangeDiv">rechner</div>
-        <div class="chart&table">
-            <div class="chartDiv">
-                <canvas id="myChart"></canvas>
+
+        <div class="currencyChangeDiv">
+            <span>here you can calculate how much BTC you can buy with your USD and vice versa </span>
+            <div class="currencyFields">
+
+                <form id="currencyChange" action="#">
+                    <div class="amount">
+                        <p>Enter your amount</p>
+
+                        <div class="currencyInput">
+                            <span>USD</span><input id="input1" oninput="convertCurrencyToBTC()" type="number"
+                                placeholder="$">
+                            <span>BTC</span><input id="input2" oninput="convertCurrencyToUSD()" type="number"
+                                placeholder="BTC">
+                        </div>
+                        <div class="exchangeRate">
+                            1 BTC = <b id="currentCourse2"></b> &nbsp;$
+
+                        </div>
+                        <div class="showChart">
+                            <button> <a href="#chartANDtable"> show as Chart </a></button>
+                        </div>
+
+                    </div>
+                </form>
             </div>
-            <div class="table">table</div>
         </div>
+        <div class="bg3">
+            <div id="chartANDtable" class="chartANDtable">
+                <span>start Date</span>
+                <input id="startDate" type="date">
+                <span>end Date</span>
+                <input id="endDate" type="date">
+            </div>
+            <div class="getDate"><button id="getDateButton" onclick="getDates()">get Values</button>
+
+                <button class="d-none" id="showAsBarChartButton" onclick="getDatesBarChart()">show as Bar Chart</button>
+            </div>
+
+            <div id="chartContainer" class="chartDiv d-none">
+                <canvas id="myChart"></canvas>
+
+            </div>
+
+            <div class="tableOutputHolder" id="tableOutput" style="display:none"></div>
+
+        </div>
+    </div>
+
     </div>
 </body>
 
