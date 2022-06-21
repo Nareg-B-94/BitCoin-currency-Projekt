@@ -27,6 +27,7 @@ function convertCurrencyToBTC() {
     let x = document.getElementById('input1').value / bitCoinCurrency;
     x = document.getElementById('input2').value = x.toFixed(6);
 }
+
 function convertCurrencyToUSD() {
     let x = document.getElementById('input2').value * bitCoinCurrency;
     document.getElementById('input1').value = x;
@@ -156,11 +157,12 @@ function buildTable() {
 
     </table>
 
-    `}
+    `
+    }
 };
 
 
-$(function () {
+$(function() {
     var dtToday = new Date();
 
     var month = dtToday.getMonth() + 1;
@@ -176,40 +178,3 @@ $(function () {
     $('#endDate').attr('max', minDate);
     $('#startDate').attr('max', minDate);
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
