@@ -6,11 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BitCoin currency</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 
 </head>
 
@@ -61,27 +62,31 @@
             </div>
         </div>
         <div class="bg3">
-            <div id="chartANDtable" class="chartANDtable">
-                <span>start Date</span>
-                <input id="startDate" type="date">
-                <span>end Date</span>
-                <input id="endDate" type="date">
+            <div class="popupWindow">
+                <div id="popupMessage" class="popupMessage d-none"><span class="popupMSG"> please pick a &nbsp; <i> Start </i> &nbsp; <b> and </b> &nbsp; <i> End </i> &nbsp; Date.</span>
+                    <span><button onclick="removePopup()">x</button></span>
+                </div>
+                <div id="chartANDtable" class="chartANDtable">
+                    <span>start Date</span>
+                    <input id="startDate" type="date">
+                    <span>end Date</span>
+                    <input id="endDate" type="date">
+                </div>
+                <div class="getDate"><button id="getDateButton" onclick="getDates()">get Values</button>
+
+                    <button class="d-none" id="showAsBarChartButton" onclick="getDatesBarChart()">show as Bar Chart</button>
+                </div>
+
+                <div id="chartContainer" class="chartDiv d-none">
+                    <canvas id="myChart"></canvas>
+
+                </div>
+
+                <div class="tableOutputHolder" id="tableOutput" style="display:none"></div>
+
             </div>
-            <div class="getDate"><button id="getDateButton" onclick="getDates()">get Values</button>
-
-                <button class="d-none" id="showAsBarChartButton" onclick="getDatesBarChart()">show as Bar Chart</button>
-            </div>
-
-            <div id="chartContainer" class="chartDiv d-none">
-                <canvas id="myChart"></canvas>
-
-            </div>
-
-            <div class="tableOutputHolder" id="tableOutput" style="display:none"></div>
-
         </div>
     </div>
-
     </div>
 </body>
 

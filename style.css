@@ -173,7 +173,7 @@ body {
 }
 
 .d-none {
-    display: none;
+    display: none !important;
 }
 
 .tableOutput {
@@ -194,25 +194,129 @@ body {
     overflow-y: scroll;
     height: 200px;
     border: 5px solid white;
-    margin-bottom: 40px;
     padding-bottom: 40px;
 }
 
+.popupWindow {
+    position: relative;
+    z-index: 100;
+    height: auto;
+}
+
+.popupMessage {
+    position: absolute;
+    display: flex;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 101;
+    background-color: #453331ea;
+    padding-top: 200px;
+    margin-left: 200px;
+    margin-right: 200px;
+    border-radius: 80px;
+    padding-bottom: 200px;
+    font-size: 1.4em;
+    -webkit-box-shadow: 23px 24px 33px 11px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 23px 24px 33px 11px rgba(0, 0, 0, 1);
+    box-shadow: 23px 24px 33px 11px rgb(255, 255, 255);
+}
+
+.popupMessage span {
+    margin-left: 50px;
+}
+
+.popupMessage button {
+    cursor: pointer;
+}
+
 @media (max-width: 900px) {
-    .welcomeText span {
-        font-size: 0.8em;
-        margin-left: 20px;
-        margin-right: 20px;
+    body {
+        width: 100%;
+    }
+    h1 {
+        font-size: 1.4em !important;
+        text-align: center;
+    }
+    .welcomeText {
+        font-size: 0.85em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px !important;
+        margin-right: 50px !important;
+    }
+    .currentCourse {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .currentCourse b {
+        margin: 5px;
     }
     .navigationButtons {
         display: flex;
         flex-direction: column;
-        margin: 25px !important;
+        margin-top: 20px;
     }
     .currencyBtn {
-        margin: 10px !;
+        margin: unset !important;
+        ;
     }
     .chartBtn {
-        margin: 10px !
+        margin: unset !important;
+        ;
+    }
+    .currencyChangeDiv {
+        text-align: center;
+    }
+    .currencyFields {
+        width: unset !important;
+    }
+    .currencyInput {
+        display: flex;
+        flex-direction: column;
+    }
+    #input1 {
+        padding: 10px !important;
+    }
+    #input2 {
+        padding: 10px !important;
+    }
+    .showChart button a {
+        padding: 8px !important;
+    }
+    .chartANDtable {
+        display: flex;
+        flex-direction: column;
+    }
+    .chartANDtable span {
+        margin: 10px;
+    }
+    #startDate {
+        margin: 10px;
+    }
+    .popupMessage {
+        margin-left: 20px!important;
+        margin-right: 20px !important;
+        padding-top: 150px !important;
+        padding-bottom: 150px!important;
+        text-align: center;
+    }
+    .popupMessage button {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 70px;
+        margin-left: 80px !important;
+        margin-right: 80px !important;
+    }
+    .tableOutputHolder {
+        margin: unset !important;
     }
 }

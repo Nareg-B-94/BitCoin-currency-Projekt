@@ -33,17 +33,28 @@ function convertCurrencyToUSD() {
     document.getElementById('input1').value = x;
 }
 
+function removePopup() {
+    document.getElementById('popupMessage').classList.add('d-none');
+};
+
+
+
+
 // chart 
 
 async function getDates() {
     if (myChart != null) {
         deleteChart()
     }
-    if (document.getElementById('startDate').value == 0) {
-        document.getElementById('getDateButton').disabled = true
-        alert('please select a start date and an End date');
-        location.reload();
+    if (document.getElementById('startDate').value.length == 0) {
 
+        document.getElementById('popupMessage').classList.remove('d-none');
+        return;
+    }
+    if (document.getElementById('endDate').value.length == 0) {
+
+        document.getElementById('popupMessage').classList.remove('d-none');
+        return;
     }
 
 
@@ -107,6 +118,7 @@ function getDatesBarChart() {
     if (myChart != null) {
         deleteChart()
     };
+
     let info = responseAsJson.dataset.data;
     for (let i = info.length - 1; i > 0; i--) {
         labelsX.push(info[i][0]);
