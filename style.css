@@ -4,61 +4,151 @@ html {
 
 body {
     margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Special Elite', cursive;
     color: white
+}
+
+h1 {
+    font-size: 2.2em;
+}
+
+h3 {
+    font-size: 1.2em;
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
 }
 
 .firstSection {
     height: 100vh;
     background-image: url('../BitCoin-currency-Projekt/img/bg1.jpg');
+    background-position: center;
 }
 
 .bg3 {
     min-height: 100vh;
-    background-image: url('../BitCoin-currency-Projekt/img/bg1.jpg');
+    background-position: center;
+    background-color: #907055;
 }
 
 .welcomeText {
     display: flex;
     justify-content: center;
-    padding-top: 70px;
+    padding-top: 140px;
+    text-align: center;
 }
 
 .currentCourse {
     margin-top: 80px;
     display: flex;
     justify-content: center;
+    font-size: 1.3em;
 }
 
 .navigationButtons {
-    margin-top: 100px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
 }
 
 .navigationButtons a {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
+}
+
+.navigationButtons span {
+    font-size: 1.4em;
+}
+
+.currencyBtnDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.chartBtnDiv {
+    display: flex;
+    flex-direction: column;
 }
 
 .currencyBtn {
-    padding: 10px;
-    border-radius: 15px;
-    margin-right: 10px;
+    background-color: #270603;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 80px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 10px;
     cursor: pointer;
-    background-color: rgba(99, 99, 99, 0.678);
-    font-size: 1.5em;
-    border-color: white;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    background-image: url(../BitCoin-currency-Projekt/img/BitToDol.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.currencyBtn a {
+    margin-top: 50px;
+}
+
+.currencyBtn:hover {
+    box-shadow: 0 12px 16px 0 rgba(241, 241, 241, 0.568), 0 17px 50px 0 rgba(255, 254, 254, 0.534);
 }
 
 .chartBtn {
-    padding: 10px;
-    border-radius: 15px;
-    margin-left: 10px;
+    background-color: #270603;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 80px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 10px;
     cursor: pointer;
-    background-color: rgba(99, 99, 99, 0.678);
-    font-size: 1.5em;
-    border-color: white;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../BitCoin-currency-Projekt/img/chartLogo.png);
+    background-size: contain;
+}
+
+.chartBtn:hover {
+    box-shadow: 0 12px 16px 0 rgba(241, 241, 241, 0.568), 0 17px 50px 0 rgba(255, 254, 254, 0.534);
+}
+
+.infoBtnDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.infoBtn {
+    background-color: #270603;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 80px 100px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 10px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../BitCoin-currency-Projekt/img/infoLogo.png);
+    background-size: contain;
+}
+
+.infoBtn:hover {
+    box-shadow: 0 12px 16px 0 rgba(241, 241, 241, 0.568), 0 17px 50px 0 rgba(255, 254, 254, 0.534);
 }
 
 .currencyChangeDiv {
@@ -69,7 +159,9 @@ body {
     font-size: 1.5em;
     flex-direction: column;
     min-height: 100vh;
-    background-image: url('../BitCoin-currency-Projekt/img/bg1.jpg');
+    background-color: #3b1d1dcb;
+    background-position: right;
+    text-align: center;
 }
 
 .currencyChangeDiv span {
@@ -104,8 +196,8 @@ body {
 }
 
 .currencyInput input {
-    border-radius: 15px;
-    padding: 30px;
+    border-radius: 8px;
+    padding: 20px;
 }
 
 .exchangeRate {
@@ -120,14 +212,23 @@ body {
 }
 
 .showChart button {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    border-radius: 15px;
+    background-color: #270603;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 10px;
     cursor: pointer;
-    background-color: rgba(99, 99, 99, 0.678);
-    font-size: 1.1em;
-    border-color: white;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+
+.showChart button:hover {
+    box-shadow: 0 12px 16px 0 rgba(241, 241, 241, 0.568), 0 17px 50px 0 rgba(255, 254, 254, 0.534);
 }
 
 .showChart a {
@@ -140,28 +241,58 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 80px;
+    padding-top: 200px;
+    margin-right: 40px;
+}
+
+#startDate {
+    border-radius: 8px;
+}
+
+#endDate {
+    border-radius: 8px;
+}
+
+.chartANDtable input {
+    background: #ffffff;
+    padding: 1em;
+    color: black;
+    letter-spacing: 2px;
+    border-radius: 8;
 }
 
 .chartANDtable span {
     margin-left: 40px;
     margin-right: 15px;
+    font-size: 1.2em;
 }
 
 .getDate {
     display: flex;
-    justify-content: center;
     margin: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .getDate button {
-    border-radius: 15px;
-    cursor: pointer;
+    background-color: #270603;
+    border: none;
+    border-radius: 8px;
     color: white;
-    background-color: rgba(99, 99, 99, 0.678);
-    font-size: 1.3em;
-    padding: 10px;
-    margin-top: 30px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 15px 10px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    width: 170px;
+}
+
+.getDate button:hover {
+    box-shadow: 0 12px 16px 0 rgba(241, 241, 241, 0.568), 0 17px 50px 0 rgba(255, 254, 254, 0.534);
 }
 
 .chartDiv {
@@ -192,9 +323,9 @@ body {
     margin-left: 300px;
     margin-right: 300px;
     overflow-y: scroll;
-    height: 200px;
-    border: 5px solid white;
-    padding-bottom: 40px;
+    height: 250px;
+    border: thick double #533937be;
+    padding-bottom: 15px;
 }
 
 .popupWindow {
@@ -214,23 +345,43 @@ body {
     align-items: center;
     z-index: 101;
     background-color: #453331ea;
-    padding-top: 200px;
-    margin-left: 200px;
-    margin-right: 200px;
-    border-radius: 80px;
-    padding-bottom: 200px;
-    font-size: 1.4em;
-    -webkit-box-shadow: 23px 24px 33px 11px rgba(0, 0, 0, 1);
-    -moz-box-shadow: 23px 24px 33px 11px rgba(0, 0, 0, 1);
-    box-shadow: 23px 24px 33px 11px rgb(255, 255, 255);
+    box-shadow: 0 12px 16px 0 rgba(241, 241, 241, 0.568), 0 17px 50px 0 rgba(255, 254, 254, 0.534);
 }
 
 .popupMessage span {
     margin-left: 50px;
 }
 
-.popupMessage button {
+.popupMessage button:hover {
     cursor: pointer;
+    box-shadow: 0 12px 16px 0 rgba(241, 241, 241, 0.568), 0 17px 50px 0 rgba(255, 254, 254, 0.534);
+}
+
+#infoSection {
+    background-image: url(../BitCoin-currency-Projekt/img/bg2.jpg);
+    background-position: top;
+    text-align: center;
+}
+
+.longText {
+    margin-top: 20px;
+    margin-left: 60vw;
+    margin-right: 80px;
+    letter-spacing: 1px;
+}
+
+.disclaimer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+    margin-left: 80px;
+    margin-right: 80px;
+    letter-spacing: 1.2px
+}
+
+.discHeader {
+    font-size: 2em;
 }
 
 @media (max-width: 900px) {
@@ -266,7 +417,6 @@ body {
     }
     .currencyBtn {
         margin: unset !important;
-        ;
     }
     .chartBtn {
         margin: unset !important;
@@ -290,10 +440,6 @@ body {
     }
     .showChart button a {
         padding: 8px !important;
-    }
-    .chartANDtable {
-        display: flex;
-        flex-direction: column;
     }
     .chartANDtable span {
         margin: 10px;
