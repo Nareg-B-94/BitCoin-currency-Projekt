@@ -39,7 +39,7 @@
                             <button class="chartBtn" id="chartBtn"> </button></a><span>Historic charts</span></div>
                     <div class="infoBtnDiv">
                         <a href="#infoSection"><button class="infoBtn" id="infoBtn"></button></a>
-                        <span>more Info</span>
+                        <span>More Info</span>
                     </div>
                 </div>
             </div>
@@ -51,6 +51,7 @@
             </div>
             <div class="currencyFields">
                 <p>Enter your amount</p>
+
                 <form id="currencyChange">
                     <div class="currencyInput">
                         <span>USD</span><input id="input1" oninput="convertCurrencyToBTC()" type="number " placeholder="$">
@@ -68,9 +69,12 @@
         <div class="thirdSection">
             <div class="chartsSection">
                 <div id="chartANDtable" class="chartANDtable">
+                    <div class="noticeText">
+                        <p>Notice* the API provides daily Data till 03:00 AM. that means the last readable Data is from <b> YESTERDAY </b>.</p>
+                    </div>
                     <span>Start date</span>
                     <input id="startDate" type="date" max="">
-                    <span>End date</span>
+                    <span>End date*</span>
                     <input id="endDate" type="date">
                 </div>
                 <div class="getDate"><button id="getDateButton" onclick="getDates()">Get values

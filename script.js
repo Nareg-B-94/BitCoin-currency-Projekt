@@ -17,7 +17,7 @@ function scrollToTop() {
 };
 
 window.onscroll = function() {
-    if (window.scrollY > 350) {
+    if (window.scrollY > 700) {
         document.getElementById('stickyNavButton').classList.remove('d-none');
 
     } else {
@@ -36,7 +36,7 @@ function todayAsFunction() {
 
 //loads the current currency Value of Bitcoin
 async function loadCurrentRate() {
-    let urlForToday = `https://cors-anywhere.herokuapp.com/https://data.nasdaq.com/api/v3/datasets/BCHAIN/MKPRU?start_date=${today}&end_date=${today}&api_key=${API_KEY}`;
+    let urlForToday = `https://data.nasdaq.com/api/v3/datasets/BCHAIN/MKPRU?start_date=${today}&end_date=${today}&api_key=${API_KEY}`;
     let responseToday = await fetch(urlForToday);
     responseAsJsonToday = await responseToday.json();
     console.log(responseAsJsonToday['dataset'])
@@ -68,7 +68,7 @@ function removePopup() {
 
 
 // chart ----------------------------------------------------------------
-// saving the Dates to further creat the Chart 
+// generating the Dates and then saving them to further creat the Chart 
 async function getDates() {
     let selectedStartDate = document.getElementById('startDate').value.length;
     let selectedEndDate = document.getElementById('endDate').value.length;
@@ -93,7 +93,7 @@ async function getDates() {
 
     endDate.push(endDateValue);
     startDate.push(startDateValue);
-    let url = `https://cors-anywhere.herokuapp.com/https://data.nasdaq.com/api/v3/datasets/BCHAIN/MKPRU?start_date=${startDate}&end_date=${endDate}&api_key=${API_KEY}`;
+    let url = `https://data.nasdaq.com/api/v3/datasets/BCHAIN/MKPRU?start_date=${startDate}&end_date=${endDate}&api_key=${API_KEY}`;
     let response = await fetch(url);
     responseAsJson = await response.json();
     console.log(responseAsJson)
