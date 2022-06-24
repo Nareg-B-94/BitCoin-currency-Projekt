@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,96 +14,125 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap" rel="stylesheet">
 
 </head>
 
 <body onload="loadCurrentRate()">
-    <div class="mainContainer">
-        <section class="firstSection">
-
-            <div class="welcomeText">
-                <span>
-                    <h1>Welcome to the Bitcoin currency checker</h1>
-                    <h3>an API based website that takes the actual Data that relevant to Bitcoin and translates them to useful Data that the any user needs in world of Bitcoin</h3>
-                    <div class="currentCourse">Currently as today:&nbsp <b id="todaysDate"></b> &nbsp &nbsp <b> 1
-                        </b> &nbsp BTC equals
-                        &nbsp
-                        <b id="currentCourse"> </b>&nbsp USD
-                    </div>
-                    <div class="navigationButtons">
-                        <div class="currencyBtnDiv">
-                        <a href="#currencyChangeDiv"><button class="currencyBtn" id="currencyBtn">  </button></a> <span>
-                        Currency change </span>
-            </div>
-            <div class="chartBtnDiv">
-                <a href="#chartANDtable">
-                    <button class="chartBtn" id="chartBtn"> </button></a><span>Historic charts</span></div>
-            <div class="infoBtnDiv">
-                <a href="#infoSection"><button class="infoBtn" id="infoBtn"></button></a>
-                <span>more Info</span>
-            </div>
-    </div>
-    </span>
-    </div>
-    </section>
-    <section class="secondSection"></section>
-
-    <div id="currencyChangeDiv" class="currencyChangeDiv">
-        <span>use this special calculator that shows you the current value your Dollar has to Bitcoin and vice versa  </span>
-        <div class="currencyFields">
-
-            <form id="currencyChange" action="#">
-                <div class="amount">
-                    <p>Enter your amount</p>
-
-                    <div class="currencyInput">
-                        <span>USD</span><input id="input1" oninput="convertCurrencyToBTC()" type="number" placeholder="$">
-                        <span>BTC</span><input id="input2" oninput="convertCurrencyToUSD()" type="number" placeholder="BTC">
-                    </div>
-                    <div class="exchangeRate">
-                        1 BTC = <b id="currentCourse2"></b> &nbsp;$
-
-                    </div>
-                    <div class="showChart">
-                        <button> <a href="#chartANDtable"> Show as Chart </a></button>
-                    </div>
-
+    <div class=" mainContainer">
+        <div id="stickyNavButton" class="stickyNavButton d-none"> <img src="img/scroll.png" onclick="scrollToTop() "></div>
+        <div class="firstSection ">
+            <div class="welcomeText ">
+                <h1>Welcome to the Bitcoin currency checker</h1>
+                <h3>an API based website that takes the current Data that are relevant to Bitcoin, and translates them to useful Data that corresponds to the needs of any Bitcoin trader in the world</h3>
+                <div class="currentCourse ">Currently as today:&nbsp <b id="todaysDate "></b> &nbsp &nbsp <b> 1
+                        </b> &nbsp BTC equals &nbsp
+                    <b id="currentCourse "> </b>&nbsp USD
                 </div>
-            </form>
-        </div>
-    </div>
-    <div class="bg3">
-        <div class="popupWindow">
-            <div id="popupMessage" class="popupMessage d-none"><span class="popupMSG"> please pick a <i> Start </i> &nbsp; <b> and </b> &nbsp; <i> End </i> &nbsp; date.</span>
-                <span><button onclick="removePopup()">x</button></span>
+                <div class="navigationButtons ">
+                    <div class="currencyBtnDiv ">
+                        <a href="#currencyChangeDiv "><button class="currencyBtn " id="currencyBtn ">  </button></a> <span>
+                        Currency change </span>
+                    </div>
+                    <div class="chartBtnDiv ">
+                        <a href="#chartANDtable ">
+                            <button class="chartBtn " id="chartBtn "> </button></a><span>Historic charts</span></div>
+                    <div class="infoBtnDiv ">
+                        <a href="#infoSection "><button class="infoBtn " id="infoBtn "></button></a>
+                        <span>more Info</span>
+                    </div>
+                </div>
             </div>
-            <div id="chartANDtable" class="chartANDtable">
+        </div>
+        <div class="secondSection " id="currencyChangeDiv ">
+            <div class="currencyChangeDiv ">
+                <div class="explainSpan ">Use this special calculator that shows you the current value your Dollar has to Bitcoin and vice versa.</div>
+
+            </div>
+            <div class="currencyFields ">
+                <p>Enter your amount</p>
+                <form id="currencyChange ">
+                    <div class="currencyInput ">
+                        <span>USD</span><input id="input1 " oninput="convertCurrencyToBTC() " type="number " placeholder="$ ">
+                        <span>BTC</span><input id="input2 " oninput="convertCurrencyToUSD() " type="number " placeholder="BTC ">
+                    </div>
+                    <div class="exchangeRate ">
+                        Currently 1 BTC = <b id="currentCourse2 "></b> &nbsp;$
+                    </div>
+                    <div class="showChart ">
+                        <button> <a href="#chartANDtable "> Show as Chart </a></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="thirdSection ">
+            <div class="chartsSection ">
+                <div id="chartANDtable " class="chartANDtable ">
+                    <span>Start date</span>
+                    <input id="startDate " type="date " max=" ">
+                    <span>End date</span>
+                    <input id="endDate " type="date ">
+                </div>
+                <div class="getDate "><button id="getDateButton " onclick="getDates() ">Get values
+                </button>
+                    <button class="d-none " id="showAsBarChartButton " onclick="getDatesBarChart() ">show as Bar</button>
+                </div>
+                <div id="chartContainer " class="chartDiv d-none ">
+                    <canvas id="myChart "></canvas>
+                </div>
+                <div class="tableOutputHolder " id="tableOutput " style="display:none ">
+                </div>
+            </div>
+            <div class="fourthSection ">
+                <div id="infoSection ">
+                    <div class="disclaimer ">
+                        <span class="discHeader ">disclaimer!</span>
+                        <span>This site was created only for&nbsp;<b>portfolio</b>&nbsp;intentions in mind, which means that this values that are shown and generated using API's cannot be held accountable </span>
+                    </div>
+                    <div class="longText ">Bitcoin Cash managed the immutable digital signature! IPO thought some hashrate! Although someone controls the provably fair orphan, Bitcoin generates lots of trusted **Lambo, yet Lightning Network thinking** some consensus point for
+                        many whitepaper. ICO cooperated lots of dormant genesis block **because** VeChain did the quick blockchain in many difficulty! Tezos expected lots of [automated dump! Solidity](https://example.com) generates many *trusted hashrate,*
+                        however, *Binance Coin is a* max supply! NFT stacks lots *of* hot [peer-to-peer](https://example.com) network at some on-ledger currency, or ERC20 token standard allowed few considerable genesis block. Ether built the *bear, so
+                        Dash surrendered lots* of **price!** Binance Coin is the [consensus](https://example.com) point, therefore, SHA 256 cooperated the minimum IPO during lots of **market cap.** Although *Ravencoin* allowed few directed acyclic graph
+                        in some *unconfirmed,* Solidity **sharded many** mnemonic phrase! Although Maker counted few vaporware until many atomic swap, TRON *broadcast many fish* behind many proof of stake. IOTA stuck some burned arbitrage although **OmiseGo**
+                        counted many digital signature, nor Golem managed a reinvested volume since Ravencoin was lots *of confirmation! ICO* identified many chain, and Golem cost many centralised algorithm of few public key. When Ontology halving few
+                        algo-traded bear until the faucet, OmiseGo specialises in few algo-traded ICO at lots of fundamental analysis. Ethereum accompanied by many *flippening. When Ontology mining* few constant node, [blockchain](https://example.com)
+                        sharded a 51% attack in some anti-money *laundering!*</div>
+                </div>
+            </div>
+
+
+
+            <!-- <div class="mainContainer ">
+
+    
+    <div class="bg3 ">
+        
+            <div id="chartANDtable " class="chartANDtable ">
                 <span>Start date</span>
-                <input id="startDate" type="date" max="">
+                <input id="startDate " type="date " max=" ">
                 <span>End date</span>
-                <input id="endDate" type="date">
+                <input id="endDate " type="date ">
             </div>
-            <div class="getDate"><button id="getDateButton" onclick="getDates()">Get values</button>
+            <div class="getDate "><button id="getDateButton " onclick="getDates() ">Get values</button>
 
-                <button class="d-none" id="showAsBarChartButton" onclick="getDatesBarChart()">show as Bar</button>
-            </div>
-
-            <div id="chartContainer" class="chartDiv d-none">
-                <canvas id="myChart"></canvas>
-
+                <button class="d-none " id="showAsBarChartButton " onclick="getDatesBarChart() ">show as Bar</button>
             </div>
 
-            <div class="tableOutputHolder" id="tableOutput" style="display:none"></div>
+            <div id="chartContainer " class="chartDiv d-none ">
+                <canvas id="myChart "></canvas>
+
+            </div>
+
+            <div class="tableOutputHolder " id="tableOutput " style="display:none "></div>
 
         </div>
     </div>
-    <div id="infoSection">
-        <div class="disclaimer">
-            <span class="discHeader">disclaimer!</span>
+    <div id="infoSection ">
+        <div class="disclaimer ">
+            <span class="discHeader ">disclaimer!</span>
             <span>This site was created only for&nbsp;<b>portfolio</b>&nbsp;intentions in mind, which means that this values that are shown and generated using API's cannot be held accountable </span>
         </div>
-        <div class="longText">Bitcoin Cash managed the immutable digital signature! IPO thought some hashrate! Although someone controls the provably fair orphan, Bitcoin generates lots of trusted **Lambo, yet Lightning Network thinking** some consensus point for many whitepaper.
+        <div class="longText ">Bitcoin Cash managed the immutable digital signature! IPO thought some hashrate! Although someone controls the provably fair orphan, Bitcoin generates lots of trusted **Lambo, yet Lightning Network thinking** some consensus point for many whitepaper.
             ICO cooperated lots of dormant genesis block **because** VeChain did the quick blockchain in many difficulty! Tezos expected lots of [automated dump! Solidity](https://example.com) generates many *trusted hashrate,* however, *Binance Coin
             is a* max supply! NFT stacks lots *of* hot [peer-to-peer](https://example.com) network at some on-ledger currency, or ERC20 token standard allowed few considerable genesis block. Ether built the *bear, so Dash surrendered lots* of **price!**
             Binance Coin is the [consensus](https://example.com) point, therefore, SHA 256 cooperated the minimum IPO during lots of **market cap.** Although *Ravencoin* allowed few directed acyclic graph in some *unconfirmed,* Solidity **sharded many**
@@ -111,7 +141,7 @@
             ICO at lots of fundamental analysis. Ethereum accompanied by many *flippening. When Ontology mining* few constant node, [blockchain](https://example.com) sharded a 51% attack in some anti-money *laundering!*</div>
     </div>
     </div>
-    </div>
+    </div> -->
 </body>
 
 </html>

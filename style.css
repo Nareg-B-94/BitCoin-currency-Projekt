@@ -4,8 +4,8 @@ html {
 
 body {
     margin: 0;
-    font-family: 'Special Elite', cursive;
-    color: white
+    font-family: 'PT Sans Narrow', sans-serif;
+    color: black
 }
 
 h1 {
@@ -19,22 +19,42 @@ h3 {
     margin-right: 200px;
 }
 
-.firstSection {
-    height: 100vh;
-    background-image: url('../BitCoin-currency-Projekt/img/bg1.jpg');
-    background-position: center;
+.stickyNavButton {
+    position: fixed;
+    padding: 10px;
+    bottom: 50px;
+    right: 20px;
+    z-index: 99999;
 }
 
-.bg3 {
+.stickyNavButton img:hover {
+    width: 60px;
+    cursor: pointer;
+    background-color: #009639;
+}
+
+.stickyNavButton img {
+    width: 50px;
+    background-color: #354a5ecc;
+    border-radius: 100%;
+}
+
+.chartsSection {
     min-height: 100vh;
     background-position: center;
-    background-color: #907055;
+    background-image: url('../BitCoin-currency-Projekt/img/bg3.png');
+    background-position: center;
+    background-size: cover;
 }
 
-.welcomeText {
+.firstSection {
+    background-image: url('../BitCoin-currency-Projekt/img/bg1.jpg');
     display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-size: cover;
     justify-content: center;
-    padding-top: 140px;
+    padding-top: 100px;
     text-align: center;
 }
 
@@ -46,9 +66,10 @@ h3 {
 }
 
 .navigationButtons {
-    margin-top: 50px;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
+    margin-bottom: 100px;
 }
 
 .navigationButtons a {
@@ -71,7 +92,7 @@ h3 {
 }
 
 .currencyBtn {
-    background-color: #270603;
+    background-color: #354a5ea1;
     border: none;
     border-radius: 8px;
     color: white;
@@ -95,11 +116,12 @@ h3 {
 }
 
 .currencyBtn:hover {
-    box-shadow: 0 12px 16px 0 rgba(241, 241, 241, 0.568), 0 17px 50px 0 rgba(255, 254, 254, 0.534);
+    box-shadow: 0 12px 16px 0 rgba(252, 252, 252, 0.788), 0 17px 50px 0 #c4ec97;
+    background-color: black;
 }
 
 .chartBtn {
-    background-color: #270603;
+    background-color: #354a5ea1;
     border: none;
     border-radius: 8px;
     color: white;
@@ -119,7 +141,8 @@ h3 {
 }
 
 .chartBtn:hover {
-    box-shadow: 0 12px 16px 0 rgba(241, 241, 241, 0.568), 0 17px 50px 0 rgba(255, 254, 254, 0.534);
+    box-shadow: 0 12px 16px 0 rgba(252, 252, 252, 0.788), 0 17px 50px 0 #c4ec97;
+    background-color: black;
 }
 
 .infoBtnDiv {
@@ -128,7 +151,7 @@ h3 {
 }
 
 .infoBtn {
-    background-color: #270603;
+    background-color: #354a5ea1;
     border: none;
     border-radius: 8px;
     color: white;
@@ -148,32 +171,39 @@ h3 {
 }
 
 .infoBtn:hover {
-    box-shadow: 0 12px 16px 0 rgba(241, 241, 241, 0.568), 0 17px 50px 0 rgba(255, 254, 254, 0.534);
+    box-shadow: 0 12px 16px 0 rgba(252, 252, 252, 0.788), 0 17px 50px 0 #c4ec97;
+    background-color: black;
 }
 
-.currencyChangeDiv {
+.secondSection {
+    background-image: url(../BitCoin-currency-Projekt/img/bg2.png);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 50px;
     font-size: 1.5em;
     flex-direction: column;
-    min-height: 100vh;
-    background-color: #3b1d1dcb;
     background-position: right;
+    text-align: center;
+    height: 85vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.explainSpan {
+    font-size: 1.5em;
+    margin-top: 50px;
+    width: 80%;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.currencyChangeDiv {
     text-align: center;
 }
 
-.currencyChangeDiv span {
-    width: 80%;
-}
-
 .currencyFields {
-    margin-top: 90px;
-    width: 450px;
-    height: 553px;
-    justify-content: center;
-    display: flex;
+    margin-left: 250px;
+    margin-right: 250px;
 }
 
 .currencyChange {
@@ -203,16 +233,17 @@ h3 {
 .exchangeRate {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 24px;
 }
 
 .showChart {
     display: flex;
     justify-content: center;
+    margin-top: 24px;
 }
 
 .showChart button {
-    background-color: #270603;
+    background-color: black;
     border: none;
     border-radius: 8px;
     color: white;
@@ -228,7 +259,7 @@ h3 {
 }
 
 .showChart button:hover {
-    box-shadow: 0 12px 16px 0 rgba(241, 241, 241, 0.568), 0 17px 50px 0 rgba(255, 254, 254, 0.534);
+    box-shadow: 0 12px 16px 0 rgba(241, 241, 241, 0.568), 0 17px 50px 0 #c4ec97;
 }
 
 .showChart a {
@@ -241,7 +272,7 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 200px;
+    padding-top: 100px;
     margin-right: 40px;
 }
 
@@ -275,7 +306,7 @@ h3 {
 }
 
 .getDate button {
-    background-color: #270603;
+    background-color: black;
     border: none;
     border-radius: 8px;
     color: white;
@@ -292,7 +323,7 @@ h3 {
 }
 
 .getDate button:hover {
-    box-shadow: 0 12px 16px 0 rgba(241, 241, 241, 0.568), 0 17px 50px 0 rgba(255, 254, 254, 0.534);
+    box-shadow: 0 12px 16px 0 rgba(241, 241, 241, 0.568), 0 17px 50px 0 #c4ec97;
 }
 
 .chartDiv {
@@ -314,7 +345,8 @@ h3 {
 }
 
 .tableOutputHolder {
-    margin-top: 25px;
+    font-size: 1.2em;
+    margin-top: 30px;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -324,50 +356,42 @@ h3 {
     margin-right: 300px;
     overflow-y: scroll;
     height: 250px;
-    border: thick double #533937be;
-    padding-bottom: 15px;
+    border: thick double black;
+    padding-bottom: 30px;
 }
 
-.popupWindow {
-    position: relative;
-    z-index: 100;
-    height: auto;
+::-webkit-scrollbar {
+    width: 12px;
 }
 
-.popupMessage {
-    position: absolute;
-    display: flex;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    justify-content: center;
-    align-items: center;
-    z-index: 101;
-    background-color: #453331ea;
-    box-shadow: 0 12px 16px 0 rgba(241, 241, 241, 0.568), 0 17px 50px 0 rgba(255, 254, 254, 0.534);
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #c2dda3);
+    border-radius: 8px;
 }
 
-.popupMessage span {
-    margin-left: 50px;
-}
-
-.popupMessage button:hover {
-    cursor: pointer;
-    box-shadow: 0 12px 16px 0 rgba(241, 241, 241, 0.568), 0 17px 50px 0 rgba(255, 254, 254, 0.534);
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(transparent, #005068);
 }
 
 #infoSection {
-    background-image: url(../BitCoin-currency-Projekt/img/bg2.jpg);
+    background-image: url(../BitCoin-currency-Projekt/img/bg2.png);
     background-position: top;
     text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    color: white;
+    padding-top: 50px;
+    font-size: 1.4em;
 }
 
 .longText {
+    color: white;
     margin-top: 20px;
-    margin-left: 60vw;
+    margin-left: 80px;
     margin-right: 80px;
     letter-spacing: 1px;
+    font-size: 1.2em;
 }
 
 .disclaimer {

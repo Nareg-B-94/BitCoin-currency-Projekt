@@ -9,6 +9,27 @@ let labelsY = [];
 let myChart = null;
 let bitCoinCurrency = '';
 
+
+//scroll event listener
+function scrollToTop() {
+    // window.addEventListener('scroll', () => {
+    //     const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    //     console.log(scrollable);
+    //     if (scrollable > 100) {
+    //         document.getElementById('stickyNavButton').classList.remove('d-none');
+    window.scrollTo(0);
+}
+//     });
+// }
+
+window.onscroll = function() {
+
+    if (window.scrollY > 100) {
+        document.getElementById('stickyNavButton').classList.remove('d-none');
+
+    }
+};
+
 //loads the current Day for the date picker
 function todayAsFunction() {
     ['startDate', 'endDate'].forEach((date) => {
@@ -111,7 +132,7 @@ function chart() {
         labels: labelsX, //labels = x Axis 
         datasets: [{
             label: 'Exchange Rate',
-            backgroundColor: 'gold',
+            backgroundColor: 'white',
             borderColor: 'black',
             data: labelsY, //data = Y Axis
         }]
@@ -208,3 +229,15 @@ $(function() {
     $('#endDate').attr('max', minDate);
     $('#startDate').attr('max', minDate);
 });
+
+//----------------------------------------------------------
+
+//scroll to Top of the page section
+
+// scrolls to Top.
+function scrollToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+// activating the scroll to top function
