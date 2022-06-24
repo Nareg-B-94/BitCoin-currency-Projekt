@@ -28,9 +28,9 @@ h3 {
 }
 
 .stickyNavButton img:hover {
-    width: 60px;
     cursor: pointer;
-    background-color: #009639;
+    background-color: #000000;
+    box-shadow: 0 12px 16px 0 rgba(241, 241, 241, 0.568), 0 17px 50px 0 #c4ec97;
 }
 
 .stickyNavButton img {
@@ -373,14 +373,14 @@ h3 {
     background: linear-gradient(transparent, #005068);
 }
 
-#infoSection {
+.infoSection {
     background-image: url(../BitCoin-currency-Projekt/img/bg2.png);
     background-position: top;
     text-align: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
-    color: white;
+    color: rgb(12, 12, 12);
     padding-top: 50px;
     font-size: 1.4em;
 }

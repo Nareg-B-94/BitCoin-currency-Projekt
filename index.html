@@ -19,77 +19,77 @@
 </head>
 
 <body onload="loadCurrentRate()">
-    <div class=" mainContainer">
-        <div id="stickyNavButton" class="stickyNavButton d-none"> <img src="img/scroll.png" onclick="scrollToTop() "></div>
-        <div class="firstSection ">
-            <div class="welcomeText ">
+    <div class="mainContainer">
+        <div id="stickyNavButton" class="stickyNavButton d-none"> <img src="img/scroll.png" onclick="scrollToTop()"></div>
+        <div class="firstSection">
+            <div class="welcomeText">
                 <h1>Welcome to the Bitcoin currency checker</h1>
                 <h3>an API based website that takes the current Data that are relevant to Bitcoin, and translates them to useful Data that corresponds to the needs of any Bitcoin trader in the world</h3>
-                <div class="currentCourse ">Currently as today:&nbsp <b id="todaysDate "></b> &nbsp &nbsp <b> 1
+                <div class="currentCourse">Currently as today:&nbsp <b id="todaysDate"></b> &nbsp &nbsp <b> 1
                         </b> &nbsp BTC equals &nbsp
-                    <b id="currentCourse "> </b>&nbsp USD
+                    <b id="currentCourse"> </b>&nbsp USD
                 </div>
-                <div class="navigationButtons ">
-                    <div class="currencyBtnDiv ">
-                        <a href="#currencyChangeDiv "><button class="currencyBtn " id="currencyBtn ">  </button></a> <span>
+                <div class="navigationButtons">
+                    <div class="currencyBtnDiv">
+                        <a href="#currencyChangeDiv "><button class="currencyBtn" id="currencyBtn">  </button></a> <span>
                         Currency change </span>
                     </div>
-                    <div class="chartBtnDiv ">
-                        <a href="#chartANDtable ">
-                            <button class="chartBtn " id="chartBtn "> </button></a><span>Historic charts</span></div>
-                    <div class="infoBtnDiv ">
-                        <a href="#infoSection "><button class="infoBtn " id="infoBtn "></button></a>
+                    <div class="chartBtnDiv">
+                        <a href="#chartANDtable">
+                            <button class="chartBtn" id="chartBtn"> </button></a><span>Historic charts</span></div>
+                    <div class="infoBtnDiv">
+                        <a href="#infoSection"><button class="infoBtn" id="infoBtn"></button></a>
                         <span>more Info</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="secondSection " id="currencyChangeDiv ">
-            <div class="currencyChangeDiv ">
-                <div class="explainSpan ">Use this special calculator that shows you the current value your Dollar has to Bitcoin and vice versa.</div>
+        <div class="secondSection" id="currencyChangeDiv">
+            <div class="currencyChangeDiv">
+                <div class="explainSpan">Use this special calculator that shows you the current value your Dollar has to Bitcoin and vice versa.</div>
 
             </div>
-            <div class="currencyFields ">
+            <div class="currencyFields">
                 <p>Enter your amount</p>
-                <form id="currencyChange ">
-                    <div class="currencyInput ">
-                        <span>USD</span><input id="input1 " oninput="convertCurrencyToBTC() " type="number " placeholder="$ ">
-                        <span>BTC</span><input id="input2 " oninput="convertCurrencyToUSD() " type="number " placeholder="BTC ">
+                <form id="currencyChange">
+                    <div class="currencyInput">
+                        <span>USD</span><input id="input1" oninput="convertCurrencyToBTC()" type="number " placeholder="$">
+                        <span>BTC</span><input id="input2" oninput="convertCurrencyToUSD()" type="number" placeholder="BTC">
                     </div>
-                    <div class="exchangeRate ">
-                        Currently 1 BTC = <b id="currentCourse2 "></b> &nbsp;$
+                    <div class="exchangeRate">
+                        Currently 1 BTC = <b id="currentCourse2"></b> &nbsp;$
                     </div>
-                    <div class="showChart ">
-                        <button> <a href="#chartANDtable "> Show as Chart </a></button>
+                    <div class="showChart">
+                        <button> <a href="#chartANDtable"> Show as Chart </a></button>
                     </div>
                 </form>
             </div>
         </div>
-        <div class="thirdSection ">
-            <div class="chartsSection ">
-                <div id="chartANDtable " class="chartANDtable ">
+        <div class="thirdSection">
+            <div class="chartsSection">
+                <div id="chartANDtable" class="chartANDtable">
                     <span>Start date</span>
-                    <input id="startDate " type="date " max=" ">
+                    <input id="startDate" type="date" max="">
                     <span>End date</span>
-                    <input id="endDate " type="date ">
+                    <input id="endDate" type="date">
                 </div>
-                <div class="getDate "><button id="getDateButton " onclick="getDates() ">Get values
+                <div class="getDate"><button id="getDateButton" onclick="getDates()">Get values
                 </button>
-                    <button class="d-none " id="showAsBarChartButton " onclick="getDatesBarChart() ">show as Bar</button>
+                    <button class="d-none" id="showAsBarChartButton" onclick="getDatesBarChart()">show as Bar</button>
                 </div>
-                <div id="chartContainer " class="chartDiv d-none ">
-                    <canvas id="myChart "></canvas>
+                <div id="chartContainer" class="chartDiv d-none">
+                    <canvas id="myChart"></canvas>
                 </div>
-                <div class="tableOutputHolder " id="tableOutput " style="display:none ">
+                <div class="tableOutputHolder" id="tableOutput" style="display:none">
                 </div>
             </div>
-            <div class="fourthSection ">
-                <div id="infoSection ">
-                    <div class="disclaimer ">
-                        <span class="discHeader ">disclaimer!</span>
+            <div class="fourthSection">
+                <div class="infoSection" id="infoSection">
+                    <div class="disclaimer">
+                        <span class="discHeader">disclaimer!</span>
                         <span>This site was created only for&nbsp;<b>portfolio</b>&nbsp;intentions in mind, which means that this values that are shown and generated using API's cannot be held accountable </span>
                     </div>
-                    <div class="longText ">Bitcoin Cash managed the immutable digital signature! IPO thought some hashrate! Although someone controls the provably fair orphan, Bitcoin generates lots of trusted **Lambo, yet Lightning Network thinking** some consensus point for
+                    <div class="longText">Bitcoin Cash managed the immutable digital signature! IPO thought some hashrate! Although someone controls the provably fair orphan, Bitcoin generates lots of trusted **Lambo, yet Lightning Network thinking** some consensus point for
                         many whitepaper. ICO cooperated lots of dormant genesis block **because** VeChain did the quick blockchain in many difficulty! Tezos expected lots of [automated dump! Solidity](https://example.com) generates many *trusted hashrate,*
                         however, *Binance Coin is a* max supply! NFT stacks lots *of* hot [peer-to-peer](https://example.com) network at some on-ledger currency, or ERC20 token standard allowed few considerable genesis block. Ether built the *bear, so
                         Dash surrendered lots* of **price!** Binance Coin is the [consensus](https://example.com) point, therefore, SHA 256 cooperated the minimum IPO during lots of **market cap.** Although *Ravencoin* allowed few directed acyclic graph

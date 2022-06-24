@@ -10,24 +10,19 @@ let myChart = null;
 let bitCoinCurrency = '';
 
 
-//scroll event listener
+//scroll to Top arrow
 function scrollToTop() {
-    // window.addEventListener('scroll', () => {
-    //     const scrollable = document.documentElement.scrollHeight - window.innerHeight;
-    //     console.log(scrollable);
-    //     if (scrollable > 100) {
-    //         document.getElementById('stickyNavButton').classList.remove('d-none');
+
     window.scrollTo(0);
-}
-//     });
-// }
+};
 
 window.onscroll = function() {
-
-    if (window.scrollY > 100) {
+    if (window.scrollY > 350) {
         document.getElementById('stickyNavButton').classList.remove('d-none');
 
-    }
+    } else {
+        document.getElementById('stickyNavButton').classList.add('d-none');
+    };
 };
 
 //loads the current Day for the date picker
@@ -41,7 +36,7 @@ function todayAsFunction() {
 
 //loads the current currency Value of Bitcoin
 async function loadCurrentRate() {
-    let urlForToday = `https://data.nasdaq.com/api/v3/datasets/BCHAIN/MKPRU?start_date=${today}&end_date=${today}&api_key=${API_KEY}`;
+    let urlForToday = `https://cors-anywhere.herokuapp.com/https://data.nasdaq.com/api/v3/datasets/BCHAIN/MKPRU?start_date=${today}&end_date=${today}&api_key=${API_KEY}`;
     let responseToday = await fetch(urlForToday);
     responseAsJsonToday = await responseToday.json();
     console.log(responseAsJsonToday['dataset'])
@@ -98,7 +93,7 @@ async function getDates() {
 
     endDate.push(endDateValue);
     startDate.push(startDateValue);
-    let url = `https://data.nasdaq.com/api/v3/datasets/BCHAIN/MKPRU?start_date=${startDate}&end_date=${endDate}&api_key=${API_KEY}`;
+    let url = `https://cors-anywhere.herokuapp.com/https://data.nasdaq.com/api/v3/datasets/BCHAIN/MKPRU?start_date=${startDate}&end_date=${endDate}&api_key=${API_KEY}`;
     let response = await fetch(url);
     responseAsJson = await response.json();
     console.log(responseAsJson)
