@@ -42,13 +42,13 @@ h3 {
 .chartsSection {
     min-height: 100vh;
     background-position: center;
-    background-image: url('../BitCoin-currency-Projekt/img/bg3.png');
+    background-image: url('img/bg3.png');
     background-position: center;
     background-size: cover;
 }
 
 .firstSection {
-    background-image: url('../BitCoin-currency-Projekt/img/bg1.jpg');
+    background-image: url('img/bg1.jpg');
     display: flex;
     flex-direction: column;
     background-repeat: no-repeat;
@@ -56,7 +56,7 @@ h3 {
     justify-content: center;
     padding-top: 100px;
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .currentCourse {
@@ -106,7 +106,7 @@ h3 {
     cursor: pointer;
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
-    background-image: url(../BitCoin-currency-Projekt/img/BitToDol.png);
+    background-image: url('img/BitToDol.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -137,7 +137,7 @@ h3 {
     transition-duration: 0.4s;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(../BitCoin-currency-Projekt/img/chartLogo.png);
+    background-image: url('img/chartLogo.png');
     background-size: contain;
 }
 
@@ -167,7 +167,7 @@ h3 {
     transition-duration: 0.4s;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url(../BitCoin-currency-Projekt/img/infoLogo.png);
+    background-image: url('img/infoLogo.png');
     background-size: contain;
 }
 
@@ -177,7 +177,7 @@ h3 {
 }
 
 .secondSection {
-    background-image: url(../BitCoin-currency-Projekt/img/bg2.png);
+    background-image: url('img/bg2.png');
     display: flex;
     justify-content: center;
     align-items: center;
@@ -311,7 +311,6 @@ h3 {
 
 .getDate {
     display: flex;
-    margin: 10px;
     align-items: center;
     justify-content: center;
 }
@@ -385,7 +384,7 @@ h3 {
 }
 
 .infoSection {
-    background-image: url(../BitCoin-currency-Projekt/img/bg2.png);
+    background-image: url('img/bg2.png');
     background-position: top;
     text-align: center;
     background-size: cover;

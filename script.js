@@ -1,4 +1,4 @@
-const API_KEY = '11HK8Grj5YajQJ6EAy6A';
+const API_KEY = '7yc32XoC3y_yW-ioiQTf';
 let today = new Date().toISOString().split('T')[0];
 let startDate = [];
 let endDate = [];
@@ -34,6 +34,9 @@ function todayAsFunction() {
 
 }
 
+// backup api
+// https://data.nasdaq.com/api/v3/datatables/QUOTEMEDIA/PRICES?date=2017-10-31&ticker=XOM&api_key=7yc32XoC3y_yW-ioiQTf
+
 //loads the current currency Value of Bitcoin
 async function loadCurrentRate() {
     let urlForToday = `https://data.nasdaq.com/api/v3/datasets/BCHAIN/MKPRU?start_date=${today}&end_date=${today}&api_key=${API_KEY}`;
@@ -68,7 +71,7 @@ function removePopup() {
 
 
 // chart ----------------------------------------------------------------
-// generating the Dates and then saving them to further creat the Chart 
+// generating the Dates and then saving them to further creat the Chart
 async function getDates() {
     let selectedStartDate = document.getElementById('startDate').value.length;
     let selectedEndDate = document.getElementById('endDate').value.length;
@@ -115,7 +118,7 @@ function deleteChart() {
 };
 
 
-// starts with the creation of the Chart 
+// starts with the creation of the Chart
 function chart() {
     document.getElementById('chartContainer').classList.remove('d-none');
     let info = responseAsJson.dataset.data;
@@ -124,7 +127,7 @@ function chart() {
         labelsY.push(info[i][1]);
     }
     let data = {
-        labels: labelsX, //labels = x Axis 
+        labels: labelsX, //labels = x Axis
         datasets: [{
             label: 'Exchange Rate',
             backgroundColor: 'white',
@@ -157,7 +160,7 @@ function getDatesBarChart() {
         labelsY.push(info[i][1]);
     }
     let data = {
-        labels: labelsX, //labels = x Axis 
+        labels: labelsX, //labels = x Axis
         datasets: [{
             label: 'Exchange Rate',
             backgroundColor: 'black',
@@ -197,9 +200,9 @@ function buildTable() {
     for (let i = 0; i < responseTable.length; i++) {
         tableData.innerHTML += `
     <table class="tableOutput" >
-        
+
         <tr>
-            <td class="td1">${responseTable[i][0]}:</td> &nbsp 
+            <td class="td1">${responseTable[i][0]}:</td> &nbsp
             <td class="td2">${responseTable[i][1].toFixed(2)}&nbsp<b>USD</b></td>
         </tr>
     </table>
