@@ -1,5 +1,7 @@
 const API_KEY = '7yc32XoC3y_yW-ioiQTf';
-let today = new Date().toISOString().split('T')[0];
+let today = new Date();
+today.setDate(new Date().getDate() - 1);
+let yesterday = today.toISOString().split('T')[0];
 let startDate = [];
 let endDate = [];
 let responseAsJson = '';
@@ -8,6 +10,7 @@ let labelsX = [];
 let labelsY = [];
 let myChart = null;
 let bitCoinCurrency = '';
+
 
 
 //scroll to Top arrow
@@ -39,7 +42,7 @@ function todayAsFunction() {
 
 //loads the current currency Value of Bitcoin
 async function loadCurrentRate() {
-    let urlForToday = `https://data.nasdaq.com/api/v3/datasets/BCHAIN/MKPRU?start_date=${today}&end_date=${today}&api_key=${API_KEY}`;
+    let urlForToday = `https://data.nasdaq.com/api/v3/datasets/BCHAIN/MKPRU?start_date=${yesterday}&end_date=${yesterday}&api_key=${API_KEY}`;
     let responseToday = await fetch(urlForToday);
     responseAsJsonToday = await responseToday.json();
     console.log(responseAsJsonToday['dataset'])
